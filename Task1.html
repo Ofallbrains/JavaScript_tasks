@@ -1,0 +1,62 @@
+console.log('Hello world')
+// function that calculates the sum of two numbers
+function mySum(a, b) {
+    return a + b;
+}
+console.log(mySum(8, 8));
+
+// function that gives out the maximum number in an array
+function maxNumber(array) {
+    return Math.max(...array)
+}
+const numbers = [5, 18, 57, 4, 8, 6, 45]
+console.log(Math.max(maxNumber(numbers)))
+
+const stringReturn = (str) => {
+    if (isNaN(str) && str.includes("W") && str.length == 8) {
+        return true
+    }
+
+}
+console.log(stringReturn("shjrkWld"));
+// Program that gives out the date of today
+
+let date = [new Date().getDay(), new Date().getTime()]
+switch (date[0]) {
+
+    case 0:
+        console.log("Sunday");
+        break;
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    case 4:
+        console.log("Thursday");
+        break;
+    case 5:
+        console.log("Friday");
+        break;
+    case 6:
+        console.log("Saturday");
+}
+
+// a fucntion that finds the largest of the given integers
+function findLargest(a, b, c) {
+    if (a >= b && a >= c) {
+        return a;
+    }
+    else if (b >= a && b >= c) {
+        return b;
+    }
+    else {
+        return c;
+    }
+}
+
+console.log(findLargest(4, 25, 87))
