@@ -6,24 +6,34 @@
 
 const tasks = []
 function addItems(a) {
-    return tasks.push(a)
+    return tasks.push({ nameOfTask: a, completed: false })
     
 }
-function remove() {
-    return tasks.splice(1,1)
+function complete(index) {
+     tasks[index].completed = true
+}
+// you have to create id
+function remove(index) {
+    return tasks.splice(index,1)
 }
 
 function sort() {
     return tasks.sort()
 }
+function IncompleteTask() {
+    const result = task.filter((items) => items.completed === false)
+    
+
+}
 addItems("Designing")
 addItems("math")
 addItems("eng")
 
+complete(1)
+console.log(tasks)
+// console.log(remove(0))
 // console.log(tasks)
-// console.log(remove())
-// console.log(tasks)
-console.log(sort())
+// console.log(sort())
 
 
 
