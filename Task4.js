@@ -4,4 +4,25 @@
 // c. Sort task alphabetically
 // d. Display the number of incomplete task
 
-const = []
+const tasks = []
+function addItems(a) {
+    return tasks.push(a)
+    
+}
+function remove(a) {
+    return tasks.splice(a,2)
+}
+addItems("Designing")
+addItems("math")
+addItems("eng")
+
+remove("Desighning")
+
+console.log(tasks)
+
+
+
+
+
+
+
