@@ -9,16 +9,21 @@ function addItems(a) {
     return tasks.push(a)
     
 }
-function remove(a) {
-    return tasks.splice(a,2)
+function remove() {
+    return tasks.splice(1,1)
+}
+
+function sort() {
+    return tasks.sort()
 }
 addItems("Designing")
 addItems("math")
 addItems("eng")
 
-remove("Desighning")
-
-console.log(tasks)
+// console.log(tasks)
+// console.log(remove())
+// console.log(tasks)
+console.log(sort())
 
 
 
