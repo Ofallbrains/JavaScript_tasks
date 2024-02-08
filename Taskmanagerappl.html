@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager Application</title>
+    <style>
+        .lineThrough {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Task Manager Application</p>
+    <input type="text" id="input" placeholder="Add new Task">
+    <button id="addbtn">Add Task</button>
+    <button id="btn">Remove Completed</button>
+    <ul id="list"></ul>
+
+    <script>
+        let tasks = [];
+
+        function addTask() {
+            const input = document.getElementById('input').value.trim();
+
+            if (input !== "") {
+                tasks.push({ taskName: input, completed: false });
+                modify();
+                document.getElementById('input').value = "";
+            }
+        }
+
+        function modify() {
+            const listElement = document.getElementById('list');
+            listElement.innerHTML = '';
+
+            tasks.forEach((task, index) => {
+                const listItem = document.createElement('li');
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.checked = task.completed;
+                checkbox.addEventListener('change', () => completed(index));
+
+                const label = document.createElement('label');
+                label.textContent = task.taskName;
+                if (task.completed) {
+                    label.classList.add('lineThrough');
+                }
+
+                listItem.appendChild(checkbox);
+                listItem.appendChild(label);
+                listElement.appendChild(listItem);
+            });
+        }
+
+        const addBtn = document.getElementById('addbtn');
+        addBtn.addEventListener('click', addTask);
+
+        function completed(index) {
+            tasks[index].completed = !tasks[index].completed;
+            modify();
+        }
+
+        function removeCompletedTasks() {
+            tasks = tasks.filter(task => !task.completed);
+            modify();
+        }
+
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click', removeCompletedTasks);
+
+    </script>
+</body>
+
+</html>
