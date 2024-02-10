@@ -1,0 +1,19 @@
+{
+  "questions": [
+      {
+          "question": "Who is the president of United states of America?",
+          "answers": ["donald trump", "joe biden", "george washington", "barack obama"],
+          "correctAnswerIndex": 1
+      },
+      {
+          "question": "Who is the author of The Great Gatsby?",
+          "answers": ["F. Scott Fitzgerald", "J. K. Rowling", "Mark Twain", "Dr. Seuss"],
+          "correctAnswerIndex": 1
+      },
+      {
+          "question": "ls Kigali city a province of Rwanda",
+          "answers": ["True", "False", "Maybe", "I don't know"],
+          "correctAnswerIndex": 0
+      }
+  ]
+}
