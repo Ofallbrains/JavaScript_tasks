@@ -4,7 +4,7 @@ const colors = ['red', 'green', 'blue', 'yellow', 'orange'];
 const joinedString = colors.join(',');
 
 // 2.
-colors.splice(1, 2, 'purple', 'pink');
+colors.splice(1, 2, 'purple', 'pink')
 
 // 3.
 colors.copyWithin(0, 1, 4);
