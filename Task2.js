@@ -1,13 +1,20 @@
-// Q1
 const colors = ['red', 'green', 'blue', 'yellow', 'orange'];
-console.log(colors.join(","))
-// Q2
-// console.log(colors.splice(2, 2, "purple", "pink"))
-// Q3
-// console.log(colors.copyWithin(0, 1, 3))
-// 04
 
-// 05
-console.log(colors.find((color) => color.startsWith('b')))
-// 6
-console.log(colors.slice(1, 4))
+// 1.
+const joinedString = colors.join(',');
+
+// 2.
+colors.splice(1, 2, 'purple', 'pink');
+
+// 3.
+colors.copyWithin(0, 1, 4);
+
+// 4. 
+const upperCaseColors = colors.map(color => color.toUpperCase());
+
+// 5. 
+const startsWithB = colors.find(color => color.startsWith('b'));
+
+// 6. 
+const selectedColors = colors.slice(1, 4);
+
