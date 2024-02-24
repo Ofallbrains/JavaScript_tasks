@@ -32,3 +32,5 @@ console.log(totalPriceExcludingCheap);
 const bStartingItems = items.filter(item => item.name.charAt(0).toLowerCase() === 'b');
 console.log(bStartingItems);
 
+console.log('hello')
+
